@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: assistant-backend
+    runtime: python
+    rootDir: Assistant_Backend
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    branch: main
+    autoDeploy: true
